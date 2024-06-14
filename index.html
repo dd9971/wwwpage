@@ -36,15 +36,29 @@
   </section>
   <section id="realizacje" class="content-section">
     <h2>Nasze realizacje</h2>
-    <div class="slider">
+
+    <!-- Slider dla komputerów -->
+    <div class="slider desktop-slider">
       <div class="slides">
-        <div class="slide"><img data-src="realizations/1.png" alt="Realizacja 1"></div>
-        <div class="slide"><img data-src="realizations/2.png" alt="Realizacja 2"></div>
-        <div class="slide"><img data-src="realizations/3.png" alt="Realizacja 3"></div>
-        <!-- Add more slides as needed -->
+        <div class="slide"><img src="realizations/1.png" alt="Realizacja 1"></div>
+        <div class="slide"><img src="realizations/2.png" alt="Realizacja 2"></div>
+        <div class="slide"><img src="realizations/3.png" alt="Realizacja 3"></div>
+        <!-- Dodaj więcej slajdów w razie potrzeby -->
       </div>
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      <a class="prev" onclick="plusSlides(-1, 'desktop')">&#10094;</a>
+      <a class="next" onclick="plusSlides(1, 'desktop')">&#10095;</a>
+    </div>
+
+    <!-- Slider dla telefonów -->
+    <div class="slider mobile-slider">
+      <div class="slides">
+        <div class="slide"><img src="realizations/1.png" alt="Realizacja 1"></div>
+        <div class="slide"><img src="realizations/2.png" alt="Realizacja 2"></div>
+        <div class="slide"><img src="realizations/3.png" alt="Realizacja 3"></div>
+        <!-- Dodaj więcej slajdów w razie potrzeby -->
+      </div>
+      <a class="prev" onclick="plusSlides(-1, 'mobile')">&#10094;</a>
+      <a class="next" onclick="plusSlides(1, 'mobile')">&#10095;</a>
     </div>
   </section>
   <section id="aktualnosci" class="content-section">

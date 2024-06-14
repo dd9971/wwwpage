@@ -1,24 +1,43 @@
-let slideIndex = 1;
-showSlides(slideIndex);
+let slideIndexDesktop = 0;
+let slideIndexMobile = 0;
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+function plusSlides(n, sliderType) {
+  if (sliderType === 'desktop') {
+    showSlides(slideIndexDesktop += n, 'desktop');
+  } else if (sliderType === 'mobile') {
+    showSlides(slideIndexMobile += n, 'mobile');
+  }
 }
 
-function showSlides(n) {
+function showSlides(n, sliderType) {
   let i;
-  let slides = document.getElementsByClassName("slide");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
+  let slides = document.querySelectorAll(`.${sliderType}-slider .slide`);
+  if (n >= slides.length) {
+    if (sliderType === 'desktop') {
+      slideIndexDesktop = 0;
+    } else if (sliderType === 'mobile') {
+      slideIndexMobile = 0;
+    }
+  }
+  if (n < 0) {
+    if (sliderType === 'desktop') {
+      slideIndexDesktop = slides.length - 1;
+    } else if (sliderType === 'mobile') {
+      slideIndexMobile = slides.length - 1;
+    }
+  }
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  slides[slideIndex-1].style.display = "block";
-  lazyLoad(slides[slideIndex-1].querySelector("img"));
-}
-
-function lazyLoad(img) {
-  if (!img.src) {
-    img.src = img.getAttribute('data-src');
+  if (sliderType === 'desktop') {
+    slides[slideIndexDesktop].style.display = "block";
+  } else if (sliderType === 'mobile') {
+    slides[slideIndexMobile].style.display = "block";
   }
 }
+
+// Inicjalizacja slajderów
+document.addEventListener("DOMContentLoaded", () => {
+  showSlides(slideIndexDesktop, 'desktop');
+  showSlides(slideIndexMobile, 'mobile');
+});

@@ -1,4 +1,3 @@
-/* slider.css */
 /* Ogólne style dla slajdera */
 .slider {
   position: relative;
@@ -7,27 +6,32 @@
   border-radius: 10px; /* Opcjonalnie: dodaj zaokrąglone rogi */
 }
 
-/* Style dla wersji desktopowej */
+/* Slider dla komputerów */
+.desktop-slider {
+  display: none;
+}
+
 @media (min-width: 769px) {
-  .slider {
+  .desktop-slider {
+    display: block;
     max-width: 80%; /* Dopasuj tę wartość w razie potrzeby */
-    height: 1200px; /* Ustaw stałą wysokość */
+    height: 1000px; /* Ustaw stałą wysokość */
   }
 
-  .slides {
+  .desktop-slider .slides {
     display: flex;
     transition: transform 0.5s ease-in-out;
     height: 100%; /* Upewnij się, że slajdy zajmują pełną wysokość slajdera */
   }
 
-  .slide {
+  .desktop-slider .slide {
     min-width: 100%;
     box-sizing: border-box;
     padding: 20px; /* Dodaj trochę przestrzeni wokół slajdu */
     height: 100%; /* Upewnij się, że każdy slajd zajmuje pełną wysokość slajdera */
   }
 
-  .slide img {
+  .desktop-slider .slide img {
     width: 100%;
     height: 100%; /* Upewnij się, że obrazy wypełniają slajdy */
     object-fit: cover; /* Upewnij się, że obrazy pokrywają cały slajd bez rozciągania */
@@ -35,18 +39,36 @@
   }
 }
 
-/* Style dla wersji mobilnej */
+/* Slider dla telefonów */
+.mobile-slider {
+  display: none;
+}
+
 @media (max-width: 768px) {
-  .slider {
+  .mobile-slider {
+    display: block;
     max-width: 100%;
-    height: auto; /* Automatyczna wysokość dla mobilnych urządzeń */
+    height: 300px; /* Automatyczna wysokość dla urządzeń mobilnych */
   }
 
-  .slide {
+  .mobile-slider .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .mobile-slider .slide {
+    min-width: 100%;
+    box-sizing: border-box;
     padding: 10px; /* Mniejszy padding dla urządzeń mobilnych */
+  }
+
+  .mobile-slider .slide img {
+    width: 100%;
+    display: block;
   }
 }
 
+/* Strzałki */
 .prev, .next {
   cursor: pointer;
   position: absolute;
