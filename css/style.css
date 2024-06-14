@@ -19,6 +19,8 @@
 body, html {
   overflow-x: hidden; /* Ukrywa poziomy pasek przewijania */
   max-width: 100vw; /* Maksymalna szerokość to 100% szerokości widoku przeglądarki */
+  background-color: var(--main-bg-color); /* Background color for entire page */
+
 }
 
 /* Resetowanie marginesów i wypełnień */

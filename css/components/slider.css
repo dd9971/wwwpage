@@ -3,21 +3,25 @@
   max-width: 100%;
   margin: auto;
   overflow: hidden;
+  padding: 20px; /* Dodaj padding wokół slidera */
 }
 
 .slides {
   display: flex;
   transition: transform 0.5s ease-in-out;
+  overflow: hidden; /* Ukryj nadmiarowy kontent */
 }
 
 .slide {
-  min-width: 100%;
+  min-width: 100%; /* Pełna szerokość slajdu */
   box-sizing: border-box;
+  padding: 10px; /* Dodaj padding wewnątrz slajdu */
 }
 
 .slide img {
   width: 100%;
   display: block;
+  border-radius: 10px; /* Opcjonalnie: dodaj zaokrąglone rogi */
 }
 
 .prev, .next {
@@ -33,15 +37,16 @@
   transition: 0.6s ease;
   border-radius: 3px;
   user-select: none;
+  background-color: rgba(0,0,0,0.5); /* Dodaj tło dla lepszej widoczności */
 }
 
 .prev {
-  left: 0;
+  left: 10px; /* Lekko przesunięte w lewo */
   border-radius: 3px 0 0 3px;
 }
 
 .next {
-  right: 0;
+  right: 10px; /* Lekko przesunięte w prawo */
   border-radius: 0 3px 3px 0;
 }
 
