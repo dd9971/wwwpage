@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strona Wizytówkowa</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="Logo" />
+    </div>
+    <ul class="nav-links">
+      <li><a href="#main-section">Strona główna</a></li>
+      <li><a href="#realizacje">Nasze realizacje</a></li>
+      <li><a href="#aktualnosci">Aktualności</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section id="main-section" class="main-section">
+    <div class="main-content">
+      <h1>Zaufaj naszej ekipie</h1>
+      <p>Wnętrza od projektu przez budowę do wykończenia.</p>
+      <a href="#kontakt" class="btn">Kontakt</a>
+    </div>
+  </section>
+  <section id="realizacje" class="content-section">
+    <h2>Nasze realizacje</h2>
+    <div class="slider">
+      <div class="slides">
+        <div class="slide"><img src="realizations/1.png" alt="Realizacja 1"></div>
+        <div class="slide"><img src="realizations/2.png" alt="Realizacja 2"></div>
+        <div class="slide"><img src="realizations/3.png" alt="Realizacja 3"></div>
+        <!-- Add more slides as needed -->
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+  </section>
+  <section id="aktualnosci" class="content-section">
+    <h2>Aktualności</h2>
+    <p>Najnowsze informacje...</p>
+  </section>
+  <section id="kontakt" class="content-section">
+    <h2>Kontakt</h2>
+    <p>Jak się z nami skontaktować...</p>
+  </section>
+</main>
+<footer>
+  <p>© 2024 Strona Wizytówkowa</p>
+</footer>
+<script src="scripts.js"></script>
+</body>
+</html>
