@@ -1,0 +1,53 @@
+main {
+  flex: 1;
+  background: url('../../img/main-background.png') no-repeat center center/cover;
+  background-attachment: fixed; /* Fix the background image */
+  width: 100%; /* Ensure full width */
+}
+
+.main-section {
+  text-align: center;
+  color: white;
+  padding: 5em 1em;
+  min-height: 100vh; /* ensure the main section takes the full height of the viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%; /* Ensure full width */
+}
+
+.main-content {
+  position: absolute;
+  top: 40%; /* adjust as needed */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%; /* Ensure full width */
+}
+
+.main-content h1 {
+  font-size: 3em;
+  margin: 0.5em 0;
+}
+
+.main-content p {
+  font-size: 1.2em;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  margin-top: 1em;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+  width: 150px; /* set a specific width */
+}
+
+.btn:hover {
+  background: white;
+  color: #333;
+}

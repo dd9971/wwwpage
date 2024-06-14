@@ -1,3 +1,8 @@
+// JavaScript do obsługi hamburger menu
+document.getElementById('mobile-menu').addEventListener('click', function() {
+  document.querySelector('.nav-links').classList.toggle('active');
+});
+
 let slideIndex = 0;
 showSlides(slideIndex);
 

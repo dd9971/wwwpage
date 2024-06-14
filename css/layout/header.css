@@ -1,0 +1,17 @@
+header {
+  background: var(--main-bg-color);
+  color: var(--main-text-color);
+  width: 100%; /* Ensure full width */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding);
+  width: 100%; /* Ensure full width */
+}
+
+.logo img {
+  height: 50px;
+}

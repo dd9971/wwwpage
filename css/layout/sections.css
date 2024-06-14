@@ -1,0 +1,14 @@
+.content-section {
+  padding: 5em 1em;
+  background: rgba(245, 245, 245, 0.95); /* Light background with transparency */
+  text-align: center;
+  margin: 6em 0; /* Larger margin to create space between sections */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: add shadow for better visibility */
+  border-radius: 10px; /* Optional: add border radius for better visibility */
+  width: 100%; /* Ensure full width */
+}
+
+.content-section:nth-child(even) {
+  background: rgba(229, 229, 229, 0.95); /* Light background with transparency */
+  width: 100%; /* Ensure full width */
+}

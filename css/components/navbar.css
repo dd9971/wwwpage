@@ -1,0 +1,52 @@
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Rozdziela logo i linki nawigacyjne */
+  align-items: center;
+  padding: var(--padding);
+  width: 100%;
+}
+
+.logo {
+  flex: 0 0 auto; /* Zapewnia, że logo nie rozciąga się */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+  flex: 1; /* Pozwala linkom zajmować całą pozostałą przestrzeń */
+  justify-content: flex-end; /* Wyrównuje linki do prawej */
+}
+
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Stylizacja dla hamburger menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.4s;
+}

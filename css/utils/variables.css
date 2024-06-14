@@ -1,0 +1,13 @@
+/* Kolory */
+:root {
+  --main-bg-color: #333;
+  --main-text-color: white;
+  --accent-color: #f0f0f0;
+}
+
+/* Inne zmienne */
+:root {
+  --main-font: 'Arial, sans-serif';
+  --padding: 1em;
+  --margin: 1em;
+}
