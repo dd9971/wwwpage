@@ -1,8 +1,16 @@
 main {
   flex: 1;
   background: url('../../img/main-background.png') no-repeat center center/cover;
-  background-attachment: fixed; /* Fix the background image */
-  width: 100%; /* Ensure full width */
+  background-attachment: fixed; /* Fix the background image for desktop */
+  width: 100%;
+}
+
+/* Wyłączenie background-attachment: fixed na urządzeniach mobilnych */
+@media (max-width: 768px) {
+  main {
+    background-attachment: scroll; /* Normalne przewijanie tła na urządzeniach mobilnych */
+    background-size: cover; /* Upewnij się, że tło pokrywa cały obszar */
+  }
 }
 
 .main-section {
@@ -14,6 +22,7 @@ main {
   justify-content: center;
   align-items: center;
   position: relative;
+  width: 100%;
 }
 
 .main-content {
@@ -22,6 +31,7 @@ main {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  width: 100%;
 }
 
 .main-content h1 {

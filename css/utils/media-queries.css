@@ -1,5 +1,9 @@
 /* Media Queries */
 @media (max-width: 768px) {
+  main {
+    background-attachment: scroll; /* Normalne przewijanie tła na urządzeniach mobilnych */
+    background-size: cover; /* Upewnij się, że tło pokrywa cały obszar */
+  }
   .navbar {
     flex-direction: column;
     align-items: flex-start;
