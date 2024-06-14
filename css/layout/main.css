@@ -59,3 +59,76 @@ main {
   background: white;
   color: #333;
 }
+
+/* Stylizacja dla małych ekranów (max-width: 480px) */
+@media (max-width: 480px) {
+  .main-content h1 {
+    font-size: 1.5em;
+  }
+
+  .main-content p {
+    font-size: 0.9em;
+  }
+
+  .btn {
+    width: auto;
+    padding: 0.5em;
+  }
+}
+
+/* Stylizacja dla hamburger menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  height: 40px; /* Zwiększenie wysokości menu hamburgera */
+}
+
+.menu-toggle .bar {
+  width: 30px; /* Zwiększenie szerokości paska */
+  height: 3px;
+  background-color: white;
+  margin: 6px 0; /* Zwiększenie odstępu między paskami */
+  transition: 0.4s;
+}
+
+/* Media Queries dla urządzeń mobilnych */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto; /* Automatyczna wysokość na urządzeniach mobilnych */
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    display: none; /* Ukryj menu na urządzeniach mobilnych */
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    padding: 1em;
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu-toggle {
+    display: flex; /* Pokaż hamburger menu na urządzeniach mobilnych */
+  }
+
+  .nav-links.active {
+    display: flex; /* Pokaż menu po kliknięciu */
+  }
+
+  main {
+    background-attachment: scroll; /* Wyłączenie fixed tła na mobilnych */
+    background-size: cover; /* Dopasowanie tła do ekranu */
+  }
+}
