@@ -48,7 +48,7 @@
   .mobile-slider {
     display: block;
     max-width: 100%;
-    height: 300px; /* Automatyczna wysokość dla urządzeń mobilnych */
+    height: 25vh; /* Automatyczna wysokość dla urządzeń mobilnych */
   }
 
   .mobile-slider .slides {
