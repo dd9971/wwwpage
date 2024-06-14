@@ -1,22 +1,26 @@
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1em;
-  width: 100%;
-  height: 60px; /* Zwiększenie wysokości paska nawigacyjnego */
+/* Stylizacja dla hamburger menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  height: 40px; /* Increase height of hamburger menu */
 }
 
-.logo img {
-  height: 50px;
+.menu-toggle .bar {
+  width: 30px; /* Increase width of bar */
+  height: 3px;
+  background-color: white;
+  margin: 6px 0; /* Increase spacing between bars */
+  transition: 0.4s;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
   gap: 1em;
-  flex: 1; /* Pozwala linkom zajmować całą pozostałą przestrzeń */
-  justify-content: flex-end; /* Wyrównuje linki do prawej */
 }
 
 .nav-links li {
@@ -34,21 +38,35 @@
   background: rgba(255, 255, 255, 0.1);
 }
 
-/* Stylizacja dla hamburger menu */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  position: absolute;
-  right: 20px;
-  top: 15px;
-  height: 40px; /* Zwiększenie wysokości menu hamburgera */
-}
+/* Media Queries dla urządzeń mobilnych */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto; /* Automatic height on mobile devices */
+  }
 
-.menu-toggle .bar {
-  width: 30px; /* Zwiększenie szerokości paska */
-  height: 3px;
-  background-color: white;
-  margin: 6px 0; /* Zwiększenie odstępu między paskami */
-  transition: 0.4s;
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    display: none; /* Hide menu on mobile devices */
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    padding: 1em;
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu-toggle {
+    display: flex; /* Show hamburger menu on mobile devices */
+  }
+
+  .nav-links.active {
+    display: flex; /* Show menu on click */
+  }
 }
