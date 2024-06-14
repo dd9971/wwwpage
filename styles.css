@@ -1,3 +1,4 @@
+/* Ogólne style */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -110,7 +111,7 @@ main {
 
 .slider {
   position: relative;
-  max-width: 800px;
+  max-width: 100%;
   margin: auto;
   overflow: hidden;
 }
@@ -164,4 +165,50 @@ footer {
   color: white;
   text-align: center;
   padding: 1em 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+  }
+
+  .nav-links a {
+    padding: 1em;
+    width: 100%;
+    text-align: center;
+  }
+
+  .main-content h1 {
+    font-size: 2em;
+  }
+
+  .main-content p {
+    font-size: 1em;
+  }
+
+  .btn {
+    width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content h1 {
+    font-size: 1.5em;
+  }
+
+  .main-content p {
+    font-size: 0.9em;
+  }
+
+  .btn {
+    width: auto;
+    padding: 0.5em;
+  }
 }
