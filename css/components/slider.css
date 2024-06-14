@@ -1,28 +1,50 @@
+/* slider.css */
+/* Ogólne style dla slajdera */
 .slider {
   position: relative;
-  max-width: 100%;
   margin: auto;
   overflow: hidden;
-  padding: 20px; /* Dodaj padding wokół slidera */
-}
-
-.slides {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  overflow: hidden; /* Ukryj nadmiarowy kontent */
-}
-
-.slide {
-  min-width: 100%; /* Pełna szerokość slajdu */
-  box-sizing: border-box;
-  padding: 10px; /* Dodaj padding wewnątrz slajdu */
-  margin: 0; /* Usuń margines wokół slajdu */
-}
-
-.slide img {
-  width: 100%;
-  display: block;
   border-radius: 10px; /* Opcjonalnie: dodaj zaokrąglone rogi */
+}
+
+/* Style dla wersji desktopowej */
+@media (min-width: 769px) {
+  .slider {
+    max-width: 80%; /* Dopasuj tę wartość w razie potrzeby */
+    height: 1200px; /* Ustaw stałą wysokość */
+  }
+
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%; /* Upewnij się, że slajdy zajmują pełną wysokość slajdera */
+  }
+
+  .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px; /* Dodaj trochę przestrzeni wokół slajdu */
+    height: 100%; /* Upewnij się, że każdy slajd zajmuje pełną wysokość slajdera */
+  }
+
+  .slide img {
+    width: 100%;
+    height: 100%; /* Upewnij się, że obrazy wypełniają slajdy */
+    object-fit: cover; /* Upewnij się, że obrazy pokrywają cały slajd bez rozciągania */
+    display: block;
+  }
+}
+
+/* Style dla wersji mobilnej */
+@media (max-width: 768px) {
+  .slider {
+    max-width: 100%;
+    height: auto; /* Automatyczna wysokość dla mobilnych urządzeń */
+  }
+
+  .slide {
+    padding: 10px; /* Mniejszy padding dla urządzeń mobilnych */
+  }
 }
 
 .prev, .next {
@@ -38,32 +60,18 @@
   transition: 0.6s ease;
   border-radius: 3px;
   user-select: none;
-  background-color: rgba(0,0,0,0.5); /* Dodaj tło dla lepszej widoczności */
 }
 
 .prev {
-  left: 10px; /* Lekko przesunięte w lewo */
+  left: 0;
   border-radius: 3px 0 0 3px;
 }
 
 .next {
-  right: 10px; /* Lekko przesunięte w prawo */
+  right: 0;
   border-radius: 0 3px 3px 0;
 }
 
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
-}
-
-/* Stylizacja dla większych ekranów */
-@media (min-width: 769px) {
-  .slider {
-    max-width: 80%; /* Zmniejsz szerokość slidera na większych ekranach */
-  }
-
-  .slide {
-    min-width: calc(100% - 40px); /* Pomniejsz szerokość, aby uwzględnić margines */
-    padding: 10px; /* Dodaj padding wewnątrz slajdu */
-    margin: 10px; /* Dodaj margines wokół slajdu */
-  }
 }

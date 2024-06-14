@@ -1,9 +1,4 @@
-// JavaScript do obsługi hamburger menu
-document.getElementById('mobile-menu').addEventListener('click', function() {
-  document.querySelector('.nav-links').classList.toggle('active');
-});
-
-let slideIndex = 0;
+let slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlides(n) {
@@ -11,10 +6,19 @@ function plusSlides(n) {
 }
 
 function showSlides(n) {
-  let slides = document.querySelectorAll('.slide');
-  if (n >= slides.length) { slideIndex = 0 }
-  if (n < 0) { slideIndex = slides.length - 1 }
-  slides.forEach((slide, index) => {
-    slide.style.transform = `translateX(${-slideIndex * 100}%)`;
-  });
+  let i;
+  let slides = document.getElementsByClassName("slide");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block";
+  lazyLoad(slides[slideIndex-1].querySelector("img"));
+}
+
+function lazyLoad(img) {
+  if (!img.src) {
+    img.src = img.getAttribute('data-src');
+  }
 }
