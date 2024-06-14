@@ -16,6 +16,7 @@
   min-width: 100%; /* Pełna szerokość slajdu */
   box-sizing: border-box;
   padding: 10px; /* Dodaj padding wewnątrz slajdu */
+  margin: 0; /* Usuń margines wokół slajdu */
 }
 
 .slide img {
@@ -52,4 +53,17 @@
 
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
+}
+
+/* Stylizacja dla większych ekranów */
+@media (min-width: 769px) {
+  .slider {
+    max-width: 80%; /* Zmniejsz szerokość slidera na większych ekranach */
+  }
+
+  .slide {
+    min-width: calc(100% - 40px); /* Pomniejsz szerokość, aby uwzględnić margines */
+    padding: 10px; /* Dodaj padding wewnątrz slajdu */
+    margin: 10px; /* Dodaj margines wokół slajdu */
+  }
 }
