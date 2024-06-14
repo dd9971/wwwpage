@@ -1,13 +1,14 @@
 .navbar {
   display: flex;
-  justify-content: space-between; /* Rozdziela logo i linki nawigacyjne */
+  justify-content: space-between;
   align-items: center;
-  padding: var(--padding);
+  padding: 1em;
   width: 100%;
+  height: 60px; /* Zwiększenie wysokości paska nawigacyjnego */
 }
 
-.logo {
-  flex: 0 0 auto; /* Zapewnia, że logo nie rozciąga się */
+.logo img {
+  height: 50px;
 }
 
 .nav-links {
@@ -41,12 +42,13 @@
   position: absolute;
   right: 20px;
   top: 15px;
+  height: 40px; /* Zwiększenie wysokości menu hamburgera */
 }
 
 .menu-toggle .bar {
-  width: 25px;
+  width: 30px; /* Zwiększenie szerokości paska */
   height: 3px;
   background-color: white;
-  margin: 4px 0;
+  margin: 6px 0; /* Zwiększenie odstępu między paskami */
   transition: 0.4s;
 }
