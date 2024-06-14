@@ -35,15 +35,4 @@ html, body {
   padding: 0;
 }
 
-main {
-  will-change: transform;
-  backface-visibility: hidden;
-  transform: translate3d(0, 0, 0); /* Force hardware acceleration */
-}
-
-.main-section {
-  will-change: transform;
-  backface-visibility: hidden;
-  transform: translate3d(0, 0, 0); /* Force hardware acceleration */
-}
 
